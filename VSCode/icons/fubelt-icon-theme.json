@@ -1,0 +1,16 @@
+{
+  "iconDefinitions": {
+    "fubelt-icon-dark": {
+      "iconPath": "./white.svg"
+    },
+    "fubelt-icon-light": {
+      "iconPath": "./black.svg"
+    }
+  },
+  "fileExtensions": {
+    "fubelt": "fubelt-icon",
+    "fbt": "fubelt-icon"
+  },
+  "file": "fubelt-icon",
+  "fileNames": {}
+}

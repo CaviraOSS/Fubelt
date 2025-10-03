@@ -1,0 +1,101 @@
+{
+  "name": "fubelt",
+  "displayName": "Fubelt Language Support",
+  "description": "Syntax highlighting, formatting, and language support for Fubelt framework files",
+  "version": "0.1.0",
+  "publisher": "CaviraOSS",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters"
+  ],
+  "icon": "icons/logo.png",
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "fubelt",
+        "aliases": [
+          "Fubelt",
+          "fubelt"
+        ],
+        "extensions": [
+          ".fubelt",
+          ".fbt"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/black.svg",
+          "dark": "./icons/white.svg"
+        }
+      }
+    ],
+    "configurationDefaults": {
+      "[fubelt]": {
+        "editor.autoClosingBrackets": "languageDefined",
+        "editor.formatOnType": true,
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": false,
+        "editor.autoIndent": "full",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+          "other": true,
+          "comments": false,
+          "strings": true
+        }
+      },
+      "emmet.includeLanguages": {
+        "fubelt": "javascriptreact"
+      }
+    },
+    "configuration": {
+      "title": "Fubelt",
+      "properties": {
+        "fubelt.format.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable JSX-like formatting for Fubelt files"
+        },
+        "fubelt.format.useTabs": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use tabs for indentation (default: true)"
+        },
+        "fubelt.format.autoCloseTags": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically close JSX-like tags"
+        }
+      }
+    },
+    "iconThemes": [
+      {
+        "id": "fubelt-icons",
+        "label": "Fubelt Icons",
+        "path": "./icons/fubelt-icon-theme.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fubelt",
+        "scopeName": "source.fubelt",
+        "path": "./syntaxes/fubelt.tmLanguage.json",
+        "embeddedLanguages": {
+          "source.js": "javascript",
+          "source.js.embedded.fubelt": "javascript",
+          "source.css.embedded.fubelt": "css",
+          "meta.embedded.block.javascript": "javascript",
+          "meta.embedded.block.css": "css"
+        }
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0"
+  }
+}

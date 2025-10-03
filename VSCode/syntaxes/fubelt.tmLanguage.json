@@ -1,0 +1,82 @@
+{
+  "name": "Fubelt",
+  "scopeName": "source.fubelt",
+  "fileTypes": ["fubelt"],
+  "patterns": [
+    {
+      "include": "#script-block"
+    },
+    {
+      "include": "#style-block"
+    },
+    {
+      "include": "source.tsx"
+    }
+  ],
+  "repository": {
+    "script-block": {
+      "begin": "(<)(script)(>)",
+      "end": "(</)(script)(>)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.fubelt"
+        },
+        "2": {
+          "name": "entity.name.tag.script.fubelt"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.fubelt"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.fubelt"
+        },
+        "2": {
+          "name": "entity.name.tag.script.fubelt"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.fubelt"
+        }
+      },
+      "contentName": "source.js.embedded.fubelt",
+      "patterns": [
+        {
+          "include": "source.js"
+        }
+      ]
+    },
+    "style-block": {
+      "begin": "(<)(style)(>)",
+      "end": "(</)(style)(>)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.fubelt"
+        },
+        "2": {
+          "name": "entity.name.tag.style.fubelt"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.fubelt"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.fubelt"
+        },
+        "2": {
+          "name": "entity.name.tag.style.fubelt"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.fubelt"
+        }
+      },
+      "contentName": "source.css.embedded.fubelt",
+      "patterns": [
+        {
+          "include": "source.css"
+        }
+      ]
+    }
+  }
+}
